@@ -1,4 +1,4 @@
-//arreglo de instrumentos (nombre,marca y precio)
+//arreglo de instrumentos (nombre,marca)
 const instrumentos = [
     new Instrumentos('Guitarra','Fender'),
     new Instrumentos('Bateria','Druma'),

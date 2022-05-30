@@ -3,6 +3,7 @@ function iniciarAplicacion()
 {
     crearTitulo();
     crearMenu();
+    crearParrafo();
 }
 
 function crearTitulo()
@@ -11,6 +12,24 @@ function crearTitulo()
     tituloH1.innerHTML = "Sistema en Clientes";
     document.body.appendChild(tituloH1);
 }
+
+
+function crearParrafo()
+{
+    const para = document.createElement("p");
+    para.innerText = "This is a paragraph";
+    document.body.appendChild(para);
+}
+function crearTitulo()
+{
+    const tituloH1 = document.createElement("h1");
+    tituloH1.innerHTML="SISTEMA DE USUARIOS";
+    document.body.appendChild(tituloH1);
+}
+
+
+
+
 
 function crearMenu()
 {
