@@ -15,4 +15,3 @@ const clienteDos = new Cliente(2,'jose','perez',33333);
 const clienteTres = new Cliente(3,"lorena","lomez",33334);
 const clienteCuatro = new Cliente(4,"romina","gonzalez",10000000);   
 
-
