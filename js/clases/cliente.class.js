@@ -16,9 +16,20 @@ const clienteTres = new Cliente(3,"lorena","lomez",33334);
 const clienteCuatro = new Cliente(4,"romina","gonzalez",10000000);   
 
 
+function validarFormulario()
+{
+    let name = document.forms["myForm"]["fname"].value;
+    let lastname = document.forms["myForm"]["flastname"].value;
+    let nationality = document.forms["myForm"]["fnationality"].value;
+    if( name == "" ||  lastname ==  "" || nationality == "")
+    {
+      alert("Ambos campos no pueden estar  debe estar completo");
+      return false;
+    }
+}
+  
 
 //Eventos para regresar colores al formulario al completar los clientes.
-
 document.getElementById('nombre').addEventListener('focus', (evento)=>{
     evento.target.style.background = 'yellow';
 });
@@ -27,6 +38,10 @@ document.getElementById('nombre').addEventListener('blur', (evento)=>{
 });
 document.getElementById('apellido').addEventListener('focus', cambiar);
 document.getElementById('apellido').addEventListener('blur', regresar);
+document.getElementById('nacionalidad').addEventListener('blur',cambiar);
+document.getElementById('nacionalidad').addEventListener('focus',cambiar);
+
+
 function cambiar(evento){
     let componente = evento.target;
     componente.style.background = 'yellow';
@@ -35,14 +50,4 @@ function regresar(evento){
     evento.target.style.background = 'white';
 }
 
-function validarFormulario()
-{
-    let x = document.forms["myForm"]["fname"].value;
-    let y = document.forms["myForm"]["flastname"].value;
-    if( x == "" ||  y ==  "")
-    {
-      alert("Ambos campos no pueden estar  debe estar completo");
-      return false;
-    }
-}
-  
+
